@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: service-registration
+  cloud:
+    config:
+      uri: http://localhost:8888/
+      label: Farrux
+  config:
+    import: optional:configserver:http://localhost:8888/
+
